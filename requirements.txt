@@ -1,1 +1,1 @@
-pyenchant
+requests pyenchant
