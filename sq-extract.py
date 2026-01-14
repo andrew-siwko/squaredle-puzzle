@@ -21,7 +21,7 @@ if len(new_puzzle)!=len(current_puzzle):
 
 for i in range(len(current_puzzle)):
     if current_puzzle[i]!=new_puzzle[i]:
-        print('puzzle texrt changed on row',i+1,current_puzzle[i],'->',new_puzzle[i])
+        print('puzzle text changed on row',i+1,current_puzzle[i],'->',new_puzzle[i])
         puzzle_changed=True
 if puzzle_changed==True:        
     with open('puzzle.json','wt') as f:
