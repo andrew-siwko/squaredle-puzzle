@@ -26,3 +26,4 @@ for i in range(len(current_puzzle)):
 if puzzle_changed==True:        
     with open('puzzle.json','wt') as f:
         f.write(json.dumps(puzzle_json))
+        f.write('\n')
