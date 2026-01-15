@@ -89,9 +89,11 @@ if __name__=='__main__':
             word_length_dict[l]=[]
         word_length_dict[l].append(w)
     import pprint
-    pprint.pprint(word_length_dict,width=280)
+    # pprint.pprint(word_length_dict,width=280)
+    print('********************************')
+    for length in word_length_dict.keys():
+        print(length)
+        print(word_length_dict[length])
+        print('********************************')
 
     print(etime(start_time),'ending')
-
-# print_all=True
-# pprint.pprint(find_next_letter((1,2),'O',[(1,2)],7,[]))
