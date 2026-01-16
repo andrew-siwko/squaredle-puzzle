@@ -8,9 +8,11 @@ puzzle_dict={x:puzzle_dict[x] for x in puzzle_dict if '-xp' not in x}
 today_key=list(puzzle_dict.keys())[0]
 today_puzzle=puzzle_dict[today_key]
 today_puzzle_board=[x.upper() for x in today_puzzle['board']]
-puzzle_json={"puzzle_length": 12, "puzzle_text": today_puzzle_board}
 with open('puzzle.json','rt') as f:
     old_puzzle=json.loads(f.read())
+
+puzzle_length=old_puzzle.get('puzzle_length',14)
+puzzle_json={"puzzle_length": puzzle_length, "puzzle_text": today_puzzle_board}
 
 puzzle_changed=False
 new_puzzle=puzzle_json['puzzle_text']
