@@ -91,7 +91,7 @@ if __name__=='__main__':
     import pprint
     # pprint.pprint(word_length_dict,width=280)
     print('********************************')
-    for length in word_length_dict.keys():
+    for length in sorted(list(word_length_dict.keys())):
         print(length)
         print(word_length_dict[length])
         print('********************************')
