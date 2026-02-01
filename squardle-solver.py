@@ -64,7 +64,8 @@ if __name__=='__main__':
     # multiprocessing.freeze_support()
     print(etime(start_time),'starting')
     pprint.pprint(connections)
-    with multiprocessing.Pool(multiprocessing.cpu_count()-1) as p:
+    print('cpu count:',multiprocessing.cpu_count())
+    with multiprocessing.Pool(min(1,multiprocessing.cpu_count()-1)) as p:
         argument_list=[]
         for letter_position in connections.keys():
             starting_letter=puzzle[letter_position[0]-1][letter_position[1]-1]
