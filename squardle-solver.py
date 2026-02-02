@@ -65,7 +65,7 @@ if __name__=='__main__':
     print(etime(start_time),'starting')
     pprint.pprint(connections)
     print('cpu count:',multiprocessing.cpu_count())
-    with multiprocessing.Pool(min(1,multiprocessing.cpu_count()-1)) as p:
+    with multiprocessing.Pool(min(1,multiprocessing.cpu_count())) as p:
         argument_list=[]
         for letter_position in connections.keys():
             starting_letter=puzzle[letter_position[0]-1][letter_position[1]-1]
