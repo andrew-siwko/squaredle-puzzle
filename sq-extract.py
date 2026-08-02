@@ -11,7 +11,7 @@ today_puzzle_board=[x.upper() for x in today_puzzle['board']]
 with open('puzzle.json','rt') as f:
     old_puzzle=json.loads(f.read())
 
-puzzle_length=old_puzzle.get('puzzle_length',14)
+puzzle_length=14
 puzzle_json={"puzzle_length": puzzle_length, "puzzle_text": today_puzzle_board}
 
 puzzle_changed=False
